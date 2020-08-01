@@ -35,11 +35,9 @@ App =
   render: function () 
   {
     var instance;
-    var loader = $("#loader");
-    var content = $("#content");
 
-    loader.show();
-    content.hide();
+    $("#loader").show();
+    $("#content").hide();
 
     // Load account data
     web3.eth.getCoinbase(function (err, account) 
@@ -61,28 +59,30 @@ App =
     .then(function(pos)
     {
       $("#candidatesResults").html("Current Waiting: " + pos);
-      loader.hide();
-      content.show();
+      
+      $("#loader").hide();
+      $("#content").show();
     });
   },
 
   Reserve: function () 
   {
+    var instance;
+
     App.contracts.Queue.deployed()
     .then(function (_instance)
     {
-      _instance.enter({});
-      return pos = _instance.getPosition({ from: App.account });
+      instance = _instance;
+      return result = _instance.enter({});
     })
-      .then(function (pos) 
+    .then(function (result) 
     {
-        $("#candidatesResults").html("Your Position: " + pos);
+      var pos = instance.getPosition({ from: App.account });
+      return pos;
     })
     .then(function (pos) 
     {
-      $("#content").hide();
-      $("#content").show();
-
+      $("#candidatesResults").html("Your number in the queue is: " + pos);
     })
   },
 };
