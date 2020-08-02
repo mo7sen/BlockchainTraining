@@ -11,34 +11,39 @@
 
 <body>
   <div class="container" style="width: 650px;">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="text-center">Queue</h1>
-        <hr />
-        <br />
+    <h1 class="text-center">Queue System</h1>
+    <hr />
 
-        <div id="loader">
-          <p class="text-center">Loading...</p>
-        </div>
+    <div id="loader">
+      <p class="text-center">Loading...</p>
+    </div>
 
-        <div id="content" style="display: none;">
-          <p id="candidatesResults" class="text-center"></p>
-          
-          <form onSubmit="App.Reserve(); return false;">
-            <button type="submit" class="btn btn-primary">Vote</button>
-            <hr />
-          </form>
-          
-          <p id="accountAddress" class="text-center"></p>
-        </div>
-        
+    <div id="non-queuer">
+      <p id="non-queuer-currentStatus" class="text-center"></p>
+      <div id="reserveButton" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">
+        <form onSubmit="App.reserve(); return false;">
+          <button type="submit" class="btn btn-primary">Join Queue</button>
+        </form>
       </div>
+      <hr />
+    </div>
+
+    <div id="queuer">
+      <p id="queuer-currentStatus" class="text-center"></p>
+      <div id="turnInButton" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">
+        <form onSubmit="App.turnin(); return false;">
+          <button type="submit" class="btn btn-primary">Your Turn</button>
+        </form>
+      </div>
+      <hr />
+    </div>
+
+    <div id="personalAccount">
+      <p id="accountAddress" class="text-center"></p>
     </div>
   </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/web3.min.js"></script>
   <script src="js/truffle-contract.js"></script>

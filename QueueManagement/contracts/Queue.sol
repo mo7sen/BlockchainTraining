@@ -33,7 +33,8 @@ contract Queue {
   function getAll() public view returns (address[] memory) {
     uint returnSize = addressAt.length - currentPosition;
     address[] memory result = new address[](returnSize);
-    for(uint i = 0; i < returnSize; i++) {
+    for(uint i = 0; i < returnSize; i++) 
+    {
       result[i] = addressAt[i + currentPosition];
     }
     return result;

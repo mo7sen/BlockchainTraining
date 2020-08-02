@@ -1,19 +1,25 @@
-App = 
+App =
 {
   web3Provider: null,
   contracts: {},
   account: '0x0',
+  instance: null,
 
-  init: function () {
+  init: function () 
+  {
     return App.initWeb3();
   },
 
-  initWeb3: function () {
-    if (typeof web3 !== 'undefined') {
+  initWeb3: function () 
+  {
+    if (typeof web3 !== 'undefined') 
+    {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
-    } else {
+    } 
+    else 
+    {
       // Specify default instance if no web3 instance provided
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
@@ -21,25 +27,40 @@ App =
     return App.initContract();
   },
 
-  initContract: function () {
-    $.getJSON("Queue.json", function (queue) {
+  initContract: function () 
+  {
+    $.getJSON("Queue.json", function (queue) 
+    {
       // Instantiate a new truffle contract from the artifact
       App.contracts.Queue = TruffleContract(queue);
       // Connect provider to interact with contract
       App.contracts.Queue.setProvider(App.web3Provider);
 
-      return App.render();
+      return refresh();
+    });
+  },
+    
+  reserve: function () {
+    App.instance.enter()
+      .then(function () {
+        App.render();
+      });
+  },
+
+  turnin: function () {
+    App.instance.next(1).then(function()
+    {
+      App.render();
     });
   },
 
-  render: function () 
+  render: function ()
   {
-    var instance;
-
     $("#loader").show();
-    $("#content").hide();
-
-    // Load account data
+    $("#non-queuer").hide();
+    $("#queuer").hide();
+    $("#turnInButton").hide(); 
+    
     web3.eth.getCoinbase(function (err, account) 
     {
       if (err === null) 
@@ -49,48 +70,51 @@ App =
       }
     });
 
-    // Load contract data
     App.contracts.Queue.deployed()
     .then(function (_instance) 
     {
-      var pos = _instance.getPosition({ from: App.account });
-      return pos;
+      App.instance = _instance;
+      return _instance.getPosition();
     })
-    .then(function(pos)
+    .then(function (pos)
     {
-      $("#candidatesResults").html("Current Waiting: " + pos);
-      
-      $("#loader").hide();
-      $("#content").show();
+      if (pos == 0)
+      {
+        App.instance.getAll()
+        .then(function (array) 
+        {
+          $("#non-queuer-currentStatus").html(array.length + " people are currently waiting");
+          $("#non-queuer").show();
+          $("#loader").hide();
+        });
+      }
+      else if(pos == 1)
+      {
+        $("#queuer-currentStatus").html("Your Currently Number is : " + pos);
+        $("#turnInButton").show(); 
+        $("#loader").hide();
+        $("#queuer").show();
+      }
+      else 
+      {
+        $("#queuer-currentStatus").html("Your Currently Number is : " + pos);
+        $("#queuer").show();
+        $("#loader").hide();
+      }
     });
-  },
-
-  Reserve: function () 
-  {
-    var instance;
-
-    App.contracts.Queue.deployed()
-    .then(function (_instance)
-    {
-      instance = _instance;
-      return result = _instance.enter({});
-    })
-    .then(function (result) 
-    {
-      var pos = instance.getPosition({ from: App.account });
-      return pos;
-    })
-    .then(function (pos) 
-    {
-      $("#candidatesResults").html("Your number in the queue is: " + pos);
-    })
-  },
+  }
 };
-
 
 $(function () 
 {
-  $(window).load(function () {
+  $(window).load(function () 
+  {
     App.init();
   });
 });
+
+function refresh() 
+{
+  setTimeout(refresh, 5000);
+  App.render();
+}

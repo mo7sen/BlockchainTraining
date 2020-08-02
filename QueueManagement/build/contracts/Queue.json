@@ -70,12 +70,12 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"enter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAll\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"pos\",\"type\":\"uint256\"}],\"name\":\"getPersonAt\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPosition\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"personPresent\",\"type\":\"bool\"}],\"name\":\"next\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol\":\"Queue\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol\":{\"keccak256\":\"0x1c3ba688a420acc1c0973df3b3ff460ca2ad633b32691d3c33a2b8fc7f76facb\",\"urls\":[\"bzz-raw://b8b6227cc51d6afb810b90cb414c5c9cbfc259d35f4ee8094a8cc87b40689fd9\",\"dweb:/ipfs/QmcLxw1ebEn9THSa3rvyeFFV2iDR9n7LpFsQ7vyLWrP9Cq\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061048a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806353ed51431461005c5780637398ab18146100bb57806389f650fd146100d9578063e450760814610109578063e97dcb6214610177575b600080fd5b610064610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a757808201518184015260208101905061008c565b505050509050019250505060405180910390f35b6100c361026b565b6040518082815260200191505060405180910390f35b610107600480360360208110156100ef57600080fd5b810190808035151590602001909291905050506102b6565b005b6101356004803603602081101561011f57600080fd5b8101908080359060200190929190505050610313565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017f61035a565b005b606060006002546000805490500390506060816040519080825280602002602001820160405280156101c25781602001602082028038833980820191505090505b50905060008090505b828110156102625760006002548201815481106101e457fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1682828151811061021b57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff168152505080806001019150506101cb565b50809250505090565b6000600254600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403905090565b801561030f576000600254815481106102cb57fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600260008154809291906001019190505550610310565b5b50565b60008060016002548401038154811061032857fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054146103a657600080fd5b6000339080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600080549050600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555056fea2646970667358221220b0af8b20b7552aa099114c2a43bb37ec5f8470fbf22bde9c943b95353489bf6264736f6c63430006000033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806353ed51431461005c5780637398ab18146100bb57806389f650fd146100d9578063e450760814610109578063e97dcb6214610177575b600080fd5b610064610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a757808201518184015260208101905061008c565b505050509050019250505060405180910390f35b6100c361026b565b6040518082815260200191505060405180910390f35b610107600480360360208110156100ef57600080fd5b810190808035151590602001909291905050506102b6565b005b6101356004803603602081101561011f57600080fd5b8101908080359060200190929190505050610313565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017f61035a565b005b606060006002546000805490500390506060816040519080825280602002602001820160405280156101c25781602001602082028038833980820191505090505b50905060008090505b828110156102625760006002548201815481106101e457fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1682828151811061021b57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff168152505080806001019150506101cb565b50809250505090565b6000600254600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403905090565b801561030f576000600254815481106102cb57fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600260008154809291906001019190505550610310565b5b50565b60008060016002548401038154811061032857fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054146103a657600080fd5b6000339080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600080549050600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555056fea2646970667358221220b0af8b20b7552aa099114c2a43bb37ec5f8470fbf22bde9c943b95353489bf6264736f6c63430006000033",
-  "sourceMap": "35:1061:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:1061:1;;;;;;;",
-  "deployedSourceMap": "35:1061:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:1061:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;791:302;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;791:302:1;;;;;;;;;;;;;;;;;667:118;;;:::i;:::-;;;;;;;;;;;;;;;;;;;337:199;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;337:199:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;542:119;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;542:119:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;165:166;;;:::i;:::-;;791:302;830:16;855:15;892;;873:9;:16;;;;:34;855:52;;914:23;954:10;940:25;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;940:25:1;;;;914:51;;976:6;985:1;976:10;;972:96;992:10;988:1;:14;972:96;;;1030:9;1044:15;;1040:1;:19;1030:30;;;;;;;;;;;;;;;;;;;;;;;;;1018:6;1025:1;1018:9;;;;;;;;;;;;;:42;;;;;;;;;;;1004:3;;;;;;;972:96;;;;1081:6;1074:13;;;;791:302;:::o;667:118::-;711:4;764:15;;731:16;:30;749:10;731:30;;;;;;;;;;;;;;;;:48;724:55;;667:118;:::o;337:199::-;388:13;385:146;;;419:9;429:15;;419:26;;;;;;;;;;;;;;;;412:33;;;;;;;;;;;454:15;;:17;;;;;;;;;;;;;385:146;;;;337:199;:::o;542:119::-;595:7;619:9;653:1;635:15;;629:3;:21;:25;619:36;;;;;;;;;;;;;;;;;;;;;;;;;612:43;;542:119;;;:::o;165:166::-;236:1;204:16;:28;221:10;204:28;;;;;;;;;;;;;;;;:33;196:42;;;;;;245:9;260:10;245:26;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;245:26:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;309:9;:16;;;;278;:28;295:10;278:28;;;;;;;;;;;;;;;:47;;;;165:166::o",
-  "source": "pragma solidity >=0.6.0 <0.7.0;\r\n\r\ncontract Queue {\r\n\r\n  address[] addressAt;\r\n  mapping (address => uint) private addressToPositon;\r\n\r\n  uint currentPosition;\r\n\r\n  function enter() public {\r\n    require(addressToPositon[msg.sender] == 0);\r\n    addressAt.push(msg.sender);\r\n    addressToPositon[msg.sender] = addressAt.length;\r\n  }\r\n\r\n  function next(bool personPresent) public {\r\n    if(personPresent) {\r\n      delete addressAt[currentPosition];\r\n      currentPosition++;\r\n    } else {\r\n      // Not sure what to do exactly\r\n    }\r\n  }\r\n\r\n  function getPersonAt(uint pos) public view returns ( address ) {\r\n    return addressAt[pos + currentPosition - 1];\r\n  }\r\n\r\n  function getPosition() public view returns (uint) {\r\n    return addressToPositon[ msg.sender ] - currentPosition;\r\n  }\r\n\r\n  function getAll() public view returns (address[] memory) {\r\n    uint returnSize = addressAt.length - currentPosition;\r\n    address[] memory result = new address[](returnSize);\r\n    for(uint i = 0; i < returnSize; i++) {\r\n      result[i] = addressAt[i + currentPosition];\r\n    }\r\n    return result;\r\n  }\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"enter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAll\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"pos\",\"type\":\"uint256\"}],\"name\":\"getPersonAt\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPosition\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"personPresent\",\"type\":\"bool\"}],\"name\":\"next\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol\":\"Queue\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol\":{\"keccak256\":\"0x1a4777838dce0c3fc0e718f57b83abca5bce4069106112c738d9a608c2394927\",\"urls\":[\"bzz-raw://aa7deaf337943e27da8e4fe2bae7297c9eaba3819ef4766222d43b847bf7a8d7\",\"dweb:/ipfs/QmPT6kdR9fnN8ErZKnuMV1NjgqCsSmrT2sjz6BJ1otYPfe\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061048a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806353ed51431461005c5780637398ab18146100bb57806389f650fd146100d9578063e450760814610109578063e97dcb6214610177575b600080fd5b610064610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a757808201518184015260208101905061008c565b505050509050019250505060405180910390f35b6100c361026b565b6040518082815260200191505060405180910390f35b610107600480360360208110156100ef57600080fd5b810190808035151590602001909291905050506102b6565b005b6101356004803603602081101561011f57600080fd5b8101908080359060200190929190505050610313565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017f61035a565b005b606060006002546000805490500390506060816040519080825280602002602001820160405280156101c25781602001602082028038833980820191505090505b50905060008090505b828110156102625760006002548201815481106101e457fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1682828151811061021b57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff168152505080806001019150506101cb565b50809250505090565b6000600254600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403905090565b801561030f576000600254815481106102cb57fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600260008154809291906001019190505550610310565b5b50565b60008060016002548401038154811061032857fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054146103a657600080fd5b6000339080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600080549050600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555056fea26469706673582212200873f347038659f528cd46511a7c3f93d4211f0d12eda3a652eb94fef49edfc364736f6c63430006000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806353ed51431461005c5780637398ab18146100bb57806389f650fd146100d9578063e450760814610109578063e97dcb6214610177575b600080fd5b610064610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a757808201518184015260208101905061008c565b505050509050019250505060405180910390f35b6100c361026b565b6040518082815260200191505060405180910390f35b610107600480360360208110156100ef57600080fd5b810190808035151590602001909291905050506102b6565b005b6101356004803603602081101561011f57600080fd5b8101908080359060200190929190505050610313565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017f61035a565b005b606060006002546000805490500390506060816040519080825280602002602001820160405280156101c25781602001602082028038833980820191505090505b50905060008090505b828110156102625760006002548201815481106101e457fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1682828151811061021b57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff168152505080806001019150506101cb565b50809250505090565b6000600254600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403905090565b801561030f576000600254815481106102cb57fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055600260008154809291906001019190505550610310565b5b50565b60008060016002548401038154811061032857fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054146103a657600080fd5b6000339080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600080549050600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555056fea26469706673582212200873f347038659f528cd46511a7c3f93d4211f0d12eda3a652eb94fef49edfc364736f6c63430006000033",
+  "sourceMap": "35:1067:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:1067:1;;;;;;;",
+  "deployedSourceMap": "35:1067:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:1067:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;791:308;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;791:308:1;;;;;;;;;;;;;;;;;667:118;;;:::i;:::-;;;;;;;;;;;;;;;;;;;337:199;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;337:199:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;542:119;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;542:119:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;165:166;;;:::i;:::-;;791:308;830:16;855:15;892;;873:9;:16;;;;:34;855:52;;914:23;954:10;940:25;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;940:25:1;;;;914:51;;976:6;985:1;976:10;;972:102;992:10;988:1;:14;972:102;;;1036:9;1050:15;;1046:1;:19;1036:30;;;;;;;;;;;;;;;;;;;;;;;;;1024:6;1031:1;1024:9;;;;;;;;;;;;;:42;;;;;;;;;;;1004:3;;;;;;;972:102;;;;1087:6;1080:13;;;;791:308;:::o;667:118::-;711:4;764:15;;731:16;:30;749:10;731:30;;;;;;;;;;;;;;;;:48;724:55;;667:118;:::o;337:199::-;388:13;385:146;;;419:9;429:15;;419:26;;;;;;;;;;;;;;;;412:33;;;;;;;;;;;454:15;;:17;;;;;;;;;;;;;385:146;;;;337:199;:::o;542:119::-;595:7;619:9;653:1;635:15;;629:3;:21;:25;619:36;;;;;;;;;;;;;;;;;;;;;;;;;612:43;;542:119;;;:::o;165:166::-;236:1;204:16;:28;221:10;204:28;;;;;;;;;;;;;;;;:33;196:42;;;;;;245:9;260:10;245:26;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;245:26:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;309:9;:16;;;;278;:28;295:10;278:28;;;;;;;;;;;;;;;:47;;;;165:166::o",
+  "source": "pragma solidity >=0.6.0 <0.7.0;\r\n\r\ncontract Queue {\r\n\r\n  address[] addressAt;\r\n  mapping (address => uint) private addressToPositon;\r\n\r\n  uint currentPosition;\r\n\r\n  function enter() public {\r\n    require(addressToPositon[msg.sender] == 0);\r\n    addressAt.push(msg.sender);\r\n    addressToPositon[msg.sender] = addressAt.length;\r\n  }\r\n\r\n  function next(bool personPresent) public {\r\n    if(personPresent) {\r\n      delete addressAt[currentPosition];\r\n      currentPosition++;\r\n    } else {\r\n      // Not sure what to do exactly\r\n    }\r\n  }\r\n\r\n  function getPersonAt(uint pos) public view returns ( address ) {\r\n    return addressAt[pos + currentPosition - 1];\r\n  }\r\n\r\n  function getPosition() public view returns (uint) {\r\n    return addressToPositon[ msg.sender ] - currentPosition;\r\n  }\r\n\r\n  function getAll() public view returns (address[] memory) {\r\n    uint returnSize = addressAt.length - currentPosition;\r\n    address[] memory result = new address[](returnSize);\r\n    for(uint i = 0; i < returnSize; i++) \r\n    {\r\n      result[i] = addressAt[i + currentPosition];\r\n    }\r\n    return result;\r\n  }\r\n}\r\n",
   "sourcePath": "C:/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol",
   "ast": {
     "absolutePath": "/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol",
@@ -1148,7 +1148,7 @@
             "body": {
               "id": 170,
               "nodeType": "Block",
-              "src": "848:245:1",
+              "src": "848:251:1",
               "statements": [
                 {
                   "assignments": [
@@ -1371,7 +1371,7 @@
                   "body": {
                     "id": 166,
                     "nodeType": "Block",
-                    "src": "1009:59:1",
+                    "src": "1015:59:1",
                     "statements": [
                       {
                         "expression": {
@@ -1390,7 +1390,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 139,
-                              "src": "1018:6:1",
+                              "src": "1024:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                                 "typeString": "address[] memory"
@@ -1404,7 +1404,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 147,
-                              "src": "1025:1:1",
+                              "src": "1031:1:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1415,7 +1415,7 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "1018:9:1",
+                            "src": "1024:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -1432,7 +1432,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 41,
-                              "src": "1030:9:1",
+                              "src": "1036:9:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_address_$dyn_storage",
                                 "typeString": "address[] storage ref"
@@ -1457,7 +1457,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 147,
-                                "src": "1040:1:1",
+                                "src": "1046:1:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1472,13 +1472,13 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 47,
-                                "src": "1044:15:1",
+                                "src": "1050:15:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 }
                               },
-                              "src": "1040:19:1",
+                              "src": "1046:19:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1489,13 +1489,13 @@
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "IndexAccess",
-                            "src": "1030:30:1",
+                            "src": "1036:30:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
                             }
                           },
-                          "src": "1018:42:1",
+                          "src": "1024:42:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1503,7 +1503,7 @@
                         },
                         "id": 165,
                         "nodeType": "ExpressionStatement",
-                        "src": "1018:42:1"
+                        "src": "1024:42:1"
                       }
                     ]
                   },
@@ -1643,7 +1643,7 @@
                     "src": "1004:3:1"
                   },
                   "nodeType": "ForStatement",
-                  "src": "972:96:1"
+                  "src": "972:102:1"
                 },
                 {
                   "expression": {
@@ -1653,7 +1653,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 139,
-                    "src": "1081:6:1",
+                    "src": "1087:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                       "typeString": "address[] memory"
@@ -1662,7 +1662,7 @@
                   "functionReturnParameters": 127,
                   "id": 169,
                   "nodeType": "Return",
-                  "src": "1074:13:1"
+                  "src": "1080:13:1"
                 }
               ]
             },
@@ -1727,17 +1727,17 @@
               "src": "829:18:1"
             },
             "scope": 172,
-            "src": "791:302:1",
+            "src": "791:308:1",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 173,
-        "src": "35:1061:1"
+        "src": "35:1067:1"
       }
     ],
-    "src": "0:1098:1"
+    "src": "0:1104:1"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/yo_90/Documents/GitHub/BlockchainTraining/QueueManagement/contracts/Queue.sol",
@@ -2810,7 +2810,7 @@
             "body": {
               "id": 170,
               "nodeType": "Block",
-              "src": "848:245:1",
+              "src": "848:251:1",
               "statements": [
                 {
                   "assignments": [
@@ -3033,7 +3033,7 @@
                   "body": {
                     "id": 166,
                     "nodeType": "Block",
-                    "src": "1009:59:1",
+                    "src": "1015:59:1",
                     "statements": [
                       {
                         "expression": {
@@ -3052,7 +3052,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 139,
-                              "src": "1018:6:1",
+                              "src": "1024:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                                 "typeString": "address[] memory"
@@ -3066,7 +3066,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 147,
-                              "src": "1025:1:1",
+                              "src": "1031:1:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -3077,7 +3077,7 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "1018:9:1",
+                            "src": "1024:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -3094,7 +3094,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 41,
-                              "src": "1030:9:1",
+                              "src": "1036:9:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_address_$dyn_storage",
                                 "typeString": "address[] storage ref"
@@ -3119,7 +3119,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 147,
-                                "src": "1040:1:1",
+                                "src": "1046:1:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -3134,13 +3134,13 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 47,
-                                "src": "1044:15:1",
+                                "src": "1050:15:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 }
                               },
-                              "src": "1040:19:1",
+                              "src": "1046:19:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -3151,13 +3151,13 @@
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "IndexAccess",
-                            "src": "1030:30:1",
+                            "src": "1036:30:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
                             }
                           },
-                          "src": "1018:42:1",
+                          "src": "1024:42:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3165,7 +3165,7 @@
                         },
                         "id": 165,
                         "nodeType": "ExpressionStatement",
-                        "src": "1018:42:1"
+                        "src": "1024:42:1"
                       }
                     ]
                   },
@@ -3305,7 +3305,7 @@
                     "src": "1004:3:1"
                   },
                   "nodeType": "ForStatement",
-                  "src": "972:96:1"
+                  "src": "972:102:1"
                 },
                 {
                   "expression": {
@@ -3315,7 +3315,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 139,
-                    "src": "1081:6:1",
+                    "src": "1087:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                       "typeString": "address[] memory"
@@ -3324,7 +3324,7 @@
                   "functionReturnParameters": 127,
                   "id": 169,
                   "nodeType": "Return",
-                  "src": "1074:13:1"
+                  "src": "1080:13:1"
                 }
               ]
             },
@@ -3389,17 +3389,17 @@
               "src": "829:18:1"
             },
             "scope": 172,
-            "src": "791:302:1",
+            "src": "791:308:1",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 173,
-        "src": "35:1061:1"
+        "src": "35:1067:1"
       }
     ],
-    "src": "0:1098:1"
+    "src": "0:1104:1"
   },
   "compiler": {
     "name": "solc",
@@ -3409,12 +3409,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x3e41162624525D21f294eaE4532de4611F0B4FC0",
-      "transactionHash": "0x680aa082fb351b284f163b30c34070086e6a61fcb8483c82638e1515bbb1a228"
+      "address": "0x0b8974641B4A324245bFf5A68Cd28211515D2403",
+      "transactionHash": "0xa1fe63a8809f085c3a745430c3194fe17a9f6d6fa42bd003c499ce5a8959432b"
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2020-08-01T22:01:12.058Z",
+  "updatedAt": "2020-08-02T19:58:33.181Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
