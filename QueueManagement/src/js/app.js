@@ -47,7 +47,7 @@ App =
       });
   },
 
-  turnin: function () {
+  next: function () {
     App.instance.next(1).then(function()
     {
       App.render();

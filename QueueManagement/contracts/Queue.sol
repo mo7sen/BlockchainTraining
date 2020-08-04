@@ -8,7 +8,7 @@ contract Queue {
   uint currentPosition;
 
   function enter() public {
-    require(addressToPositon[msg.sender] == 0);
+    //require(addressToPositon[msg.sender] == 0);
     addressAt.push(msg.sender);
     addressToPositon[msg.sender] = addressAt.length;
   }
