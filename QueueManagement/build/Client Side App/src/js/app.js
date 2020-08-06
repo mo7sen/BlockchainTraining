@@ -47,13 +47,6 @@ App =
       });
   },
 
-  next: function () {
-    App.instance.next(1).then(function()
-    {
-      App.render();
-    });
-  },
-
   render: function ()
   {
     $("#loader").show();
