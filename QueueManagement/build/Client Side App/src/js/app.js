@@ -84,7 +84,7 @@ App =
       else if(pos == 1)
       {
         $("#queuer-currentStatus").html("Your Currently Number is : " + pos);
-        $("#turnInButton").show(); 
+        $("#turn").show(); 
         $("#loader").hide();
         $("#queuer").show();
       }
@@ -92,6 +92,7 @@ App =
       {
         $("#queuer-currentStatus").html("Your Currently Number is : " + pos);
         $("#queuer").show();
+        $("#turn").hide(); 
         $("#loader").hide();
       }
     });
@@ -108,6 +109,6 @@ $(function ()
 
 function refresh() 
 {
-  setTimeout(refresh, 5000);
+  setTimeout(refresh, 2000);
   App.render();
 }
