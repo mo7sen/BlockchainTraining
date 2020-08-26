@@ -5,7 +5,20 @@ contract Queue {
   address[] addressAt;
   mapping (address => uint) private addressToPositon;
 
+  mapping (address => bool) private admins;
+  uint16 private adminCount;
+
+  modifier onlyAdmins {
+    require(admins[msg.sender], "Only admins are allowed to call this function");
+    _;
+  }
+
   uint currentPosition;
+
+  constructor() public {
+    admins[msg.sender] = true;
+    adminCount = 1;
+  }
 
   function enter() public {
     //require(addressToPositon[msg.sender] == 0);
@@ -13,13 +26,25 @@ contract Queue {
     addressToPositon[msg.sender] = addressAt.length;
   }
 
-  function next(bool personPresent) public {
+  function next(bool personPresent) public onlyAdmins {
     if(personPresent) {
       delete addressAt[currentPosition];
       currentPosition++;
     } else {
       // Not sure what to do exactly
     }
+  }
+
+  function addAdmin(address newAdmin) public onlyAdmins returns bool{
+    admins[newAdmin] = true;
+    adminCount++;
+    return true;
+  }
+
+  function removeAdmin(address exile) public onlyAdmins returns bool{
+    if(adminCount <= 1) return false;
+    admins[newAdmin] = false;
+    return true;
   }
 
   function getPersonAt(uint pos) public view returns ( address ) {
