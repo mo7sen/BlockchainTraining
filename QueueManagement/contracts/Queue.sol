@@ -21,13 +21,14 @@ contract Queue {
   }
 
   function enter() public {
-    //require(addressToPositon[msg.sender] == 0);
+    require(addressToPositon[msg.sender] == 0);
     addressAt.push(msg.sender);
     addressToPositon[msg.sender] = addressAt.length;
   }
 
   function next(bool personPresent) public onlyAdmins {
     if(personPresent) {
+      addressToPositon[addressAt[currentPosition]] = 0;
       delete addressAt[currentPosition];
       currentPosition++;
     } else {
@@ -45,6 +46,10 @@ contract Queue {
     if(adminCount <= 1) return false;
     admins[exile] = false;
     return true;
+  }
+
+  function isAdmin(address potentialAdmin) public view returns (bool) {
+  	return admins[potentialAdmin];
   }
 
   function getPersonAt(uint pos) public view returns ( address ) {
