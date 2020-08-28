@@ -35,15 +35,15 @@ contract Queue {
     }
   }
 
-  function addAdmin(address newAdmin) public onlyAdmins returns bool{
+  function addAdmin(address newAdmin) public onlyAdmins returns ( bool ){
     admins[newAdmin] = true;
     adminCount++;
     return true;
   }
 
-  function removeAdmin(address exile) public onlyAdmins returns bool{
+  function removeAdmin(address exile) public onlyAdmins returns ( bool ){
     if(adminCount <= 1) return false;
-    admins[newAdmin] = false;
+    admins[exile] = false;
     return true;
   }
 

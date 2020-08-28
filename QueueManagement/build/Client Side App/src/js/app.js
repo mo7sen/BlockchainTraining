@@ -1,3 +1,16 @@
+
+// let ethereum = window.ethereum;
+// let web3Provider = window.web3;
+// if (typeof ethereum !== 'undefined') {
+//  await ethereum.enable();
+//  web3 = new Web3(ethereum);
+// } else if (typeof web3 !== 'undefined') {
+//  web3 = new Web3(web3.currentProvider);
+// } else {
+//  web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/d87d2b5f53884d199d3b48dc29c6458b'));
+// }
+
+
 App =
 {
   web3Provider: null,
@@ -10,18 +23,26 @@ App =
     return App.initWeb3();
   },
 
-  initWeb3: function () 
+  initWeb3: async function () 
   {
     if (typeof web3 !== 'undefined') 
     {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
+      if (ethereum)
+      {
+        try {
+          await ethereum.enable();
+        } catch (e) {
+          alert("You should enable ethereum to continue.");
+        }
+      }
     } 
     else 
     {
       // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+      App.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/d87d2b5f53884d199d3b48dc29c6458b');
       web3 = new Web3(App.web3Provider);
     }
     return App.initContract();
