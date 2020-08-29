@@ -14,29 +14,64 @@
     <h1 class="text-center">Queue System</h1>
     <hr />
 
-    <div id ="loader">
-      <p class ="text-center">Loading...</p>
+    <div id="loader">
+      <p class="text-center">Loading...</p>
     </div>
 
-    <div id="non-queuer">
-      <p id="non-queuer-currentStatus" class="text-center"></p>
-      <div id="reserveButton" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">
-        <form onSubmit="App.reserve(); return false;">
-          <button type="submit" class="btn btn-primary">Join Queue</button>
+    <div hidden id="client">
+
+      <div hidden id="queuer">
+        <p id="queuer-currentStatus" class="text-center"></p>
+        <p id="turn" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">Your Turn
+        </p>
+      </div>
+
+      <div hidden id="non-queuer">
+        <p id="non-queuer-currentStatus" class="text-center"></p>
+        <div id="reserveButton"
+          style="display : flex;  justify-content :center;  align-items : center; height : 200px;">
+          <form onSubmit="App.reserve(); return false;">
+            <button type="submit" class="btn btn-primary">Join Queue</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div hidden id="server">
+      <p id="admin" class="text-center">admin page</p>
+      <p id="server-currentStatus" class="text-center"></p>
+      
+      
+      <div id="nextButton" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">      
+        <form onSubmit="App.next(); return false;">
+          <button type="submit" class="btn btn-primary">Next</button>
         </form>
       </div>
-      <hr />
-    </div>
 
-    <div id="queuer">
-      <p id="queuer-currentStatus" class="text-center"></p>
-      <p id ="turn" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">Your Turn</p>
-      <hr />
-    </div>
+      </hr>
+
+      <div id="addAdminButton" style="display : flex;  justify-content :center;  align-items : center; height : 200px;">
+        <input type="text" placeholder="Type something..." id="myInput">	
+        
+	<form onSubmit="App.AddAdmin(); return false;">
+          <button type="submit" class="btn btn-primary">Add Admin</button>
+        </form>
+        
+	<form onSubmit="App.RemoveAdmin(); return false;">
+          <button type="submit" class="btn btn-primary">Remove Admin</button>
+        </form>
+
+      </div>
+
+</div>
+
+    <hr />
 
     <div id="personalAccount">
       <p id="accountAddress" class="text-center"></p>
     </div>
+
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
